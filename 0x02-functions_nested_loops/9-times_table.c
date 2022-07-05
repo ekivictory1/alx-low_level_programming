@@ -8,19 +8,35 @@
  */
 void times_table(void)
 {
-	int number = 0;
-	int multiplier = 0;
+	int i, j, n;
 
-	for (multiplier = 0; multiplier < 10; multiplier++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (number = 0; number < 10; number++)
+		for (j = 0; j <= 9; j++)
 		{
-			if (number > 0)
+			n = i * j;
+
+			if ((n / 10) == 0)
 			{
-				printf(", ");
+				if (j != 0)
+					_putchar(' ');
+				_putchar(n + '0');
+
+				if (j == 9)
+					continue;
+				_putchar(',');
+				_putchar(' ');
 			}
-			printf("%2d", number * multiplier);
+			else
+			{
+				_putchar((n / 10) + '0');
+				_putchar((n % 10) + '0');
+				if (j == 9)
+					continue;
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
