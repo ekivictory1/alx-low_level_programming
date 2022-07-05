@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
+
 /**
  * print_times_table - prints times table
  * @n : times table to use
