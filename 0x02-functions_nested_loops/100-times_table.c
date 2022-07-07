@@ -1,22 +1,25 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_times_table - prints the n times table, starting with 0
- * @n: number of the times table
+ * print_times_table - prints times table
+ * @n : times table to use
+ * Return:void
  */
 
-void print_times_table(int n)
+void print_times_table(int n);
 {
-	int a = 0, rep, c;
 
-	if (n < 0 || n > 15)
+int a = 0, rep, b;
+
+if (n < 0 || n > 15)
 	return;
-	while (a <= n)
+
+while (a <= n)
 {
-	for (c = 0; c <= n; c++)
+	for (b = 0; b <= n; b++)
 	{
-		rep = a * c;
-		if (c == 0)
+		rep = a * b;
+		if (b == 0)
 			_putchar('0' + rep);
 		else if (rep < 10)
 		{
@@ -36,13 +39,13 @@ void print_times_table(int n)
 			_putchar('0' + (rep - 100) / 10);
 			_putchar('0' + rep % 10);
 		}
-		if (c < n)
+		if (b < n)
 		{
 			_putchar(',');
 			_putchar(' ');
 		}
 	}
 	_putchar('\n');
-	c++;
+	a++;
 }
 }
