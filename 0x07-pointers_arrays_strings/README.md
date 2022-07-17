@@ -1,1 +1,1 @@
-0x07 pointers array strings
+0x07 pointers arrays strings
